@@ -111,15 +111,47 @@ margin: 50px 0 0 0;
  text-align:left;
  line-height: 2;
 }
+@keyframes drifting-left {
+  from {
+    left: 0%;
+  }
+
+  to {
+    left: 5%;
+  }
+}
 .top-cloud{
   position: absolute;
-  right: 300px;
-  top: 50px;
+  right: 50px;
+  left: 200px;
+  bottom:100px;
+  animation-name: drifting-left;
+  animation-duration: 30s;
+  /* animation-delay: 2s; */
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  width:50%;
+
+}
+@keyframes drifting-right {
+  from {
+    left: 45%;
+  }
+
+  to {
+    left: 50%;
+  }
 }
 .bottom-cloud{
          position: absolute;
-         left: 300px;
-         bottom: 300px;
+         left: 3px;
+         bottom: 100px;
+         width: 50%;
+         animation-name: drifting-right;
+          animation-duration: 30s;
+            /* animation-delay: 2s; */
+            animation-iteration-count: infinite;
+             animation-direction: alternate;
 }
 .student{
   text-decoration: underline;
